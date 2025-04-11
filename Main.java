@@ -1,22 +1,25 @@
-public class xxYOLO420xx{
-public static void main(String[] args){
-int[] xXx = {5, 3, 8, 4, 2};
-sortem(xXx);
-for(int i=0;i<xXx.length;i++)System.out.print(xXx[i]+" ");
-}
+public class NumberSorter {
 
-public static void sortem(int[] banana)
-{
-for(int i=0;i<=banana.length;i++)
-{
-for(int j=0;j<banana.length-i;j++)
-{
-if(banana[j+1]<banana[j])
-{
-int lol=banana[j];
-banana[j]=banana[j+1];
-banana[j+1]=lol;
-}
-}
-}
+    public static void main(String[] args) {
+        int[] numbers = {5, 3, 8, 4, 2};
+        sortAscending(numbers);
+        
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+    }
+s
+    public static void sortAscending(int[] array) {
+        // Bubble sort implementation
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    // Swap the elements
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+    }
 }
